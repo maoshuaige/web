@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-20 14:40:02 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="inits.Teacher" table="teacher" catalog="school">
+        <id name="teacherid" type="long">
+            <column name="TEACHERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="teacchername" type="string">
+            <column name="TEACCHERNAME" />
+        </property>
+        
+        <!-- 必须有many-to-many -->
+       <!--  <set name="userinfo" cascade="all" table="userinfo_teacher">
+        	<key column="teacherid"></key>
+        	<many-to-many class="inits.Userinfo" column="userid" ></many-to-many>
+        </set> -->
+        
+    </class>
+</hibernate-mapping>

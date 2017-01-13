@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-20 14:40:02 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="inits.College" table="college" catalog="school">
+        <id name="collegeid" type="long">
+            <column name="COLLEGEID" />
+            <generator class="assigned" />
+        </id>
+        
+        <property name="collegename" type="string">
+            <column name="COLLEGENAME" />
+        </property>
+        
+        <set name="userinfo" cascade="all" lazy="false"  inverse="false"> 
+            <key column="collegeid"/> 
+            <one-to-many class="inits.Userinfo" /> 
+        </set> 
+        
+    </class>
+</hibernate-mapping>

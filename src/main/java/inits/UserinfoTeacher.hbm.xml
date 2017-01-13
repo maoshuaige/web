@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-21 15:55:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="inits.UserinfoTeacher" table="userinfo_teacher" catalog="school">
+        <composite-id name="id" class="inits.UserinfoTeacherId">
+            <key-property name="userid" type="java.lang.Long">
+                <column name="USERID" />
+            </key-property>
+            <key-property name="teacherid" type="java.lang.Long">
+                <column name="TEACHERID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
